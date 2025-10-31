@@ -77,6 +77,16 @@ async def 따라하기정지(ctx):
     follow_id = None
     await ctx.reply("stopped mimicking.")
 
+@bot.command()
+@command.has_permissions(kick_member = True)
+async def 추방(ctx, member: discord.member, *, reason = None)
+	try:
+        await member.kick(reason = reason)
+    	await ctx.send()
+    except:
+		pass
+    except:
+        pass
 """
 @bot.command()
 async def 멘션도배(ctx, user_id: int):
